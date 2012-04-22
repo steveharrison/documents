@@ -6,3 +6,29 @@ Served asset /rails.png - 200 OK (15ms)
 
 Started GET "/assets/rails.png" for 127.0.0.1 at Sat Apr 21 09:18:12 +1000 2012
 Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Sun Apr 22 14:06:14 +1000 2012
+Processing by DocumentsController#index as HTML
+Completed 500 Internal Server Error in 29ms
+
+ActiveRecord::StatementInvalid (Could not find table 'documents'):
+  app/controllers/documents_controller.rb:5:in `index'
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Sun Apr 22 14:06:17 +1000 2012
+Processing by DocumentsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'documents'):
+  app/controllers/documents_controller.rb:5:in `index'
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
