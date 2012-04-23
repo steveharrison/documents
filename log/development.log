@@ -32,3 +32,186 @@ ActiveRecord::StatementInvalid (Could not find table 'documents'):
   Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
   Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
   Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20120420113236)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120420113236')[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to CreateDocuments (20120422040213)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120422040213')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_users_on_email')
+
+
+Started GET "/documents" for 127.0.0.1 at Sun Apr 22 14:37:45 +1000 2012
+Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+  Rendered documents/index.html.erb within layouts/application (1.9ms)
+Compiled documents.css  (16ms)  (pid 16293)
+Compiled scaffolds.css  (102ms)  (pid 16293)
+Compiled application.css  (142ms)  (pid 16293)
+Compiled jquery.js  (74ms)  (pid 16293)
+Compiled jquery_ujs.js  (1ms)  (pid 16293)
+Compiled documents.js  (178ms)  (pid 16293)
+Compiled application.js  (327ms)  (pid 16293)
+Completed 200 OK in 757ms (Views: 737.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Apr 22 14:37:46 +1000 2012
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Apr 22 14:37:46 +1000 2012
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Sun Apr 22 14:37:46 +1000 2012
+Served asset /documents.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Apr 22 14:37:46 +1000 2012
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Apr 22 14:37:46 +1000 2012
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Sun Apr 22 14:37:46 +1000 2012
+Served asset /documents.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Apr 22 14:37:46 +1000 2012
+Served asset /application.js - 200 OK (13ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Sun Apr 22 14:37:49 +1000 2012
+Processing by DocumentsController#new as HTML
+  Rendered documents/_form.html.erb (3.3ms)
+  Rendered documents/new.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 107ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Sun Apr 22 14:37:50 +1000 2012
+Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.3ms)[0m  SELECT "documents".* FROM "documents" 
+  Rendered documents/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20120420113236)
+Migrating to CreateDocuments (20120422040213)
+Migrating to HoboMigration1 (20120423122529)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "documents" ADD "title" varchar(255)[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "documents" ADD "body" text
+  [1m[36m (1.1ms)[0m  [1mCREATE TEMPORARY TABLE "altered_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" varchar(255), "body" text) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (43.4ms)[0m  [1mSELECT * FROM "documents"[0m
+  [1m[35m (7.0ms)[0m  DROP TABLE "documents"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime NOT NULL, "title" varchar(255), "body" text) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_documents")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_documents"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "altered_documents"
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "altered_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime NOT NULL, "title" varchar(255), "body" text) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "documents"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "documents"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "body" text) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_documents")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_documents"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "altered_documents"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120423122529')[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon Apr 23 22:26:33 +1000 2012
+Served asset /rails.png - 200 OK (32ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon Apr 23 22:26:34 +1000 2012
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Mon Apr 23 22:27:12 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (2.2ms)
+Compiled application.css  (2ms)  (pid 632)
+Compiled documents.css  (1ms)  (pid 632)
+Compiled scaffolds.css  (11ms)  (pid 632)
+Compiled application.js  (26ms)  (pid 632)
+Compiled jquery.js  (77ms)  (pid 632)
+Compiled jquery_ujs.js  (0ms)  (pid 632)
+Compiled documents.js  (580ms)  (pid 632)
+Completed 200 OK in 897ms (Views: 895.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Mon Apr 23 22:27:13 +1000 2012
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Mon Apr 23 22:27:13 +1000 2012
+Served asset /scaffolds.css - 200 OK (9ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Mon Apr 23 22:27:13 +1000 2012
+Served asset /documents.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon Apr 23 22:27:13 +1000 2012
+Served asset /jquery.js - 200 OK (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon Apr 23 22:27:13 +1000 2012
+Served asset /jquery_ujs.js - 200 OK (77ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Mon Apr 23 22:27:13 +1000 2012
+Served asset /documents.js - 200 OK (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Apr 23 22:27:14 +1000 2012
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Mon Apr 23 22:27:15 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (7.7ms)
+Rendered documents/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Mon Apr 23 22:27:17 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.4ms)
