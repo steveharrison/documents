@@ -1,8 +1,9 @@
 class Document < ActiveRecord::Base
-  # attr_accessible :title, :body
   fields do
     title :string
-    body :text
+    content :text
     timestamps
   end
+  attr_accessible :title, :content
+  belongs_to :user, :inverse_of => :documents
 end

@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+	<th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,6 +10,7 @@
 
 <% @documents.each do |document| %>
   <tr>
+	<td><b><%= document.title %></b></td>
     <td><%= link_to 'Show', document %></td>
     <td><%= link_to 'Edit', edit_document_path(document) %></td>
     <td><%= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %></td>

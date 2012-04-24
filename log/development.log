@@ -215,3 +215,2623 @@ Started GET "/documents" for 127.0.0.1 at Mon Apr 23 22:27:17 +1000 2012
   [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
 Rendered documents/index.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20120420113236)
+Migrating to CreateDocuments (20120422040213)
+Migrating to HoboMigration1 (20120423122529)
+Migrating to HoboMigration2 (20120424033026)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "documents" ADD "user_id" integer[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_documents_on_user_id" ON "documents" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120424033026')
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_documents_on_user_id')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Tue Apr 24 21:10:29 +1000 2012
+Served asset /rails.png - 200 OK (20ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Tue Apr 24 21:10:30 +1000 2012
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:10:32 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 158ms (Views: 155.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:10:33 +1000 2012
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:10:33 +1000 2012
+Served asset /documents.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:10:33 +1000 2012
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:10:33 +1000 2012
+Served asset /jquery.js - 200 OK (8ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:10:33 +1000 2012
+Served asset /documents.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:10:33 +1000 2012
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:10:33 +1000 2012
+Served asset /application.js - 200 OK (19ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 21:10:35 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (6.7ms)
+Rendered documents/new.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 21:10:53 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"Create Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"title"=>"test"}}
+WARNING: Can't mass-assign protected attributes: title
+  [1m[35mSQL (31.6ms)[0m  INSERT INTO "documents" ("body", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["body", nil], ["created_at", Tue, 24 Apr 2012 11:10:53 UTC +00:00], ["title", nil], ["updated_at", Tue, 24 Apr 2012 11:10:53 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/2
+Completed 302 Found in 42ms
+
+
+Started GET "/documents/2" for 127.0.0.1 at Tue Apr 24 21:10:53 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered documents/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 63ms (Views: 59.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:11:56 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:14:41 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:14:42 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:14:43 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:14:43 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:14:43 +1000 2012
+Served asset /documents.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:14:43 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:14:43 +1000 2012
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:14:43 +1000 2012
+Served asset /documents.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:14:43 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:20:08 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:20:09 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:20:09 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:20:09 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:20:09 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:20:09 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:20:09 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:20:09 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/1" for 127.0.0.1 at Tue Apr 24 21:20:10 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered documents/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:20:10 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:20:10 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:20:10 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:20:10 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:20:10 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:20:10 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:20:10 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_documents_on_user_id')
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 21:29:49 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (7.6ms)
+Rendered documents/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:29:49 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:29:49 +1000 2012
+Served asset /documents.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:49 +1000 2012
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:49 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:29:49 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:49 +1000 2012
+Served asset /documents.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:49 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 21:29:52 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"Create Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"title"=>"fdfd"}}
+WARNING: Can't mass-assign protected attributes: title
+  [1m[36mSQL (29.8ms)[0m  [1mINSERT INTO "documents" ("body", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["body", nil], ["created_at", Tue, 24 Apr 2012 11:29:52 UTC +00:00], ["title", nil], ["updated_at", Tue, 24 Apr 2012 11:29:52 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/3
+Completed 302 Found in 41ms
+
+
+Started GET "/documents/3" for 127.0.0.1 at Tue Apr 24 21:29:52 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDocument Load (0.3ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "3"]]
+Rendered documents/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:29:52 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:52 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:29:52 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:29:52 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:52 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:52 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:52 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:29:54 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:29:54 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:29:54 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:54 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:54 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:29:54 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:54 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:29:54 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/1/edit" for 127.0.0.1 at Tue Apr 24 21:30:52 +1000 2012
+  Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered documents/_form.html.erb (8.2ms)
+Rendered documents/edit.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:30:52 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:30:52 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:30:52 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:52 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:52 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:52 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:52 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/1" for 127.0.0.1 at Tue Apr 24 21:30:55 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered documents/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:30:55 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:55 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:30:55 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:30:55 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:55 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:55 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:55 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:30:56 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:30:57 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:30:57 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:30:57 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:57 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:57 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:57 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:30:57 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:31:17 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 29ms (Views: 24.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 99ms (Views: 96.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:18 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:19 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:19 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/1" for 127.0.0.1 at Tue Apr 24 21:31:19 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered documents/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:19 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:19 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:19 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:19 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:19 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:19 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:19 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/1" for 127.0.0.1 at Tue Apr 24 21:31:21 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered documents/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:21 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:21 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:21 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:31:21 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:21 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:21 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:31:21 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+WARNING: Can't mass-assign protected attributes: name, body
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:36:10 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:36:11 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:36:11 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:36:11 +1000 2012
+Served asset /documents.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:36:11 +1000 2012
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:36:11 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:36:11 +1000 2012
+Served asset /documents.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:36:11 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:39:42 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:43 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:43 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:43 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:43 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:43 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:43 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:43 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 21:39:48 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (7.4ms)
+Rendered documents/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:48 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:48 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:48 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:48 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:48 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:48 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:48 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 21:39:50 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"create", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"title"=>"fdfd"}}
+WARNING: Can't mass-assign protected attributes: title
+  [1m[36mSQL (26.8ms)[0m  [1mINSERT INTO "documents" ("body", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["body", nil], ["created_at", Tue, 24 Apr 2012 11:39:50 UTC +00:00], ["title", nil], ["updated_at", Tue, 24 Apr 2012 11:39:50 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/5
+Completed 302 Found in 37ms
+
+
+Started GET "/documents/5" for 127.0.0.1 at Tue Apr 24 21:39:50 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "5"]]
+Rendered documents/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 28ms (Views: 22.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:50 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:50 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:50 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:50 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:50 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:50 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:50 +1000 2012
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:39:51 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:52 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:52 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:52 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:52 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:52 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:52 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:52 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 21:39:55 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (7.4ms)
+Rendered documents/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:56 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:56 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:56 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:56 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:39:56 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:56 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:39:56 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 21:40:04 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (9.7ms)
+Rendered documents/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:05 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:05 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:05 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:05 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:05 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:05 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:05 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 21:40:25 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"Create Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"title"=>""}}
+WARNING: Can't mass-assign protected attributes: title
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "documents" ("body", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["body", nil], ["created_at", Tue, 24 Apr 2012 11:40:25 UTC +00:00], ["title", nil], ["updated_at", Tue, 24 Apr 2012 11:40:25 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/6
+Completed 302 Found in 77ms
+
+
+Started GET "/documents/6" for 127.0.0.1 at Tue Apr 24 21:40:25 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered documents/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:25 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:25 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:25 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:25 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:25 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:25 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:25 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/6/edit" for 127.0.0.1 at Tue Apr 24 21:40:27 +1000 2012
+  Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered documents/_form.html.erb (11.4ms)
+Rendered documents/edit.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:28 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:28 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:28 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:28 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:28 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:28 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:28 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/documents/6" for 127.0.0.1 at Tue Apr 24 21:40:29 +1000 2012
+  Processing by DocumentsController#update as HTML
+  Parameters: {"commit"=>"Update Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"title"=>"fdf"}, "id"=>"6"}
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", "6"]]
+WARNING: Can't mass-assign protected attributes: title
+Redirected to http://localhost:3000/documents/6
+Completed 302 Found in 15ms
+
+
+Started GET "/documents/6" for 127.0.0.1 at Tue Apr 24 21:40:29 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered documents/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:29 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:29 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:29 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:29 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:29 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:29 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:29 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:40:30 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:30 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:30 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:40:30 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:30 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:30 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:30 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:40:30 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Tue Apr 24 21:51:49 +1000 2012
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:51:51 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:51 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:51 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:51 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:51 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:51 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:51 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:51 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:51:52 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:52 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:52 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:52 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:52 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (7.0ms)
+Rendered documents/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 82ms (Views: 81.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:53 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 21:51:59 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"Create Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"body"=>"fdfd", "title"=>"fdfd"}}
+WARNING: Can't mass-assign protected attributes: body, title
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "documents" ("body", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["body", nil], ["created_at", Tue, 24 Apr 2012 11:51:59 UTC +00:00], ["title", nil], ["updated_at", Tue, 24 Apr 2012 11:51:59 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/7
+Completed 302 Found in 13ms
+
+
+Started GET "/documents/7" for 127.0.0.1 at Tue Apr 24 21:51:59 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", "7"]]
+Rendered documents/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 23ms (Views: 18.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:59 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:59 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:59 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:51:59 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:59 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:59 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:51:59 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:52:00 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:52:00 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:52:00 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:52:00 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:52:00 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:52:00 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:52:01 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:52:01 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:53:47 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 84ms (Views: 82.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:53:48 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:53:48 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:53:48 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:53:48 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:53:48 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:53:48 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:53:48 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 21:53:49 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (9.3ms)
+Rendered documents/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:53:49 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:53:49 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:53:49 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:53:49 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:53:49 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:53:49 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:53:49 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 21:54:03 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"Create Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"body"=>"fdfdfd", "title"=>"fdfdfdf"}}
+WARNING: Can't mass-assign protected attributes: body, title
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "documents" ("body", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["body", nil], ["created_at", Tue, 24 Apr 2012 11:54:03 UTC +00:00], ["title", nil], ["updated_at", Tue, 24 Apr 2012 11:54:03 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/8
+Completed 302 Found in 77ms
+
+
+Started GET "/documents/8" for 127.0.0.1 at Tue Apr 24 21:54:03 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", "8"]]
+Rendered documents/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:54:03 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:54:03 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:54:03 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:54:03 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:54:03 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:54:03 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:54:03 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 21:54:04 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 21:54:04 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 21:54:05 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 21:54:05 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 21:54:05 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 21:54:05 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 21:54:05 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 21:54:05 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Tue Apr 24 22:30:17 +1000 2012
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:30:20 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:20 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:20 +1000 2012
+Served asset /documents.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:20 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:20 +1000 2012
+Served asset /jquery.js - 304 Not Modified (69ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:20 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:20 +1000 2012
+Served asset /documents.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:20 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:30:22 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (10.0ms)
+Rendered documents/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:22 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:22 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:22 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:22 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:22 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:22 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:22 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 22:30:24 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"Create Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"body"=>"fdfd", "title"=>"fdfd"}}
+WARNING: Can't mass-assign protected attributes: body, title
+  [1m[35mSQL (80.6ms)[0m  INSERT INTO "documents" ("body", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["body", nil], ["created_at", Tue, 24 Apr 2012 12:30:24 UTC +00:00], ["title", nil], ["updated_at", Tue, 24 Apr 2012 12:30:24 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/9
+Completed 302 Found in 94ms
+
+
+Started GET "/documents/9" for 127.0.0.1 at Tue Apr 24 22:30:25 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDocument Load (0.4ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", "9"]]
+Rendered documents/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 26ms (Views: 21.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:25 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:25 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:25 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:25 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:25 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:25 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:25 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:30:26 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:26 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:26 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:26 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:26 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:30:26 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:26 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:30:26 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:33:10 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:33:10 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:33:10 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:33:10 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:33:10 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:33:10 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:33:10 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:33:10 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:33:11 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (29.1ms)
+Rendered documents/new.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 98ms
+
+ActionView::Template::Error (undefined method `name' for #<Document:0x10e4d8780>):
+    13: 
+    14: 	<div class="field">
+    15: 		<%= f.label :name %><br />
+    16: 		<%= f.text_field :name %>
+    17: 	</div>
+    18: 	
+    19: 	<div class="field">
+  app/views/documents/_form.html.erb:16:in `_app_views_documents__form_html_erb__1700989533_2271868560'
+  app/views/documents/_form.html.erb:1:in `_app_views_documents__form_html_erb__1700989533_2271868560'
+  app/views/documents/new.html.erb:3:in `_app_views_documents_new_html_erb___942467577_2270351860'
+  app/controllers/documents_controller.rb:29:in `new'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_documents_on_user_id')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20120420113236)
+Migrating to CreateDocuments (20120422040213)
+Migrating to HoboMigration1 (20120423122529)
+Migrating to HoboMigration2 (20120424033026)
+Migrating to HoboMigration3 (20120424123409)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "altered_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "content" text, "user_id" integer) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_documents_on_user_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_documents")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_documents_on_user_id" ON "altered_documents" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "documents"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (1, '2012-04-24 03:35:32.770794', '2012-04-24 03:35:32.770794', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (2, '2012-04-24 11:10:53.827933', '2012-04-24 11:10:53.827933', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (3, '2012-04-24 11:29:52.675042', '2012-04-24 11:29:52.675042', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (4, '2012-04-24 11:35:22.142043', '2012-04-24 11:35:47.570827', 'My Doc', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (5, '2012-04-24 11:39:50.625201', '2012-04-24 11:39:50.625201', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (6, '2012-04-24 11:40:25.795654', '2012-04-24 11:40:25.795654', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (7, '2012-04-24 11:51:59.355090', '2012-04-24 11:51:59.355090', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (8, '2012-04-24 11:54:03.806840', '2012-04-24 11:54:03.806840', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (9, '2012-04-24 12:30:24.955097', '2012-04-24 12:30:24.955097', NULL, NULL, NULL)[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "documents"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "content" text, "user_id" integer) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_documents")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('temp_index_altered_documents_on_user_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_documents_on_user_id" ON "documents" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "altered_documents"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (1, '2012-04-24 03:35:32.770794', '2012-04-24 03:35:32.770794', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (2, '2012-04-24 11:10:53.827933', '2012-04-24 11:10:53.827933', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (3, '2012-04-24 11:29:52.675042', '2012-04-24 11:29:52.675042', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (4, '2012-04-24 11:35:22.142043', '2012-04-24 11:35:47.570827', 'My Doc', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (5, '2012-04-24 11:39:50.625201', '2012-04-24 11:39:50.625201', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (6, '2012-04-24 11:40:25.795654', '2012-04-24 11:40:25.795654', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (7, '2012-04-24 11:51:59.355090', '2012-04-24 11:51:59.355090', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (8, '2012-04-24 11:54:03.806840', '2012-04-24 11:54:03.806840', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (9, '2012-04-24 12:30:24.955097', '2012-04-24 12:30:24.955097', NULL, NULL, NULL)[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "altered_documents"
+  [1m[36m (0.1ms)[0m  [1mCREATE TEMPORARY TABLE "altered_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "name" varchar(255), "content" text, "user_id" integer) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_documents_on_user_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_documents")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_documents_on_user_id" ON "altered_documents" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "documents"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","name","content","user_id") VALUES (1, '2012-04-24 03:35:32.770794', '2012-04-24 03:35:32.770794', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","name","content","user_id") VALUES (2, '2012-04-24 11:10:53.827933', '2012-04-24 11:10:53.827933', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","name","content","user_id") VALUES (3, '2012-04-24 11:29:52.675042', '2012-04-24 11:29:52.675042', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","name","content","user_id") VALUES (4, '2012-04-24 11:35:22.142043', '2012-04-24 11:35:47.570827', 'My Doc', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","name","content","user_id") VALUES (5, '2012-04-24 11:39:50.625201', '2012-04-24 11:39:50.625201', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","name","content","user_id") VALUES (6, '2012-04-24 11:40:25.795654', '2012-04-24 11:40:25.795654', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","name","content","user_id") VALUES (7, '2012-04-24 11:51:59.355090', '2012-04-24 11:51:59.355090', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","name","content","user_id") VALUES (8, '2012-04-24 11:54:03.806840', '2012-04-24 11:54:03.806840', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","name","content","user_id") VALUES (9, '2012-04-24 12:30:24.955097', '2012-04-24 12:30:24.955097', NULL, NULL, NULL)[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "documents"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "name" varchar(255), "content" text, "user_id" integer) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("altered_documents")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_documents_on_user_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_documents_on_user_id" ON "documents" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "altered_documents"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","name","content","user_id") VALUES (1, '2012-04-24 03:35:32.770794', '2012-04-24 03:35:32.770794', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","name","content","user_id") VALUES (2, '2012-04-24 11:10:53.827933', '2012-04-24 11:10:53.827933', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","name","content","user_id") VALUES (3, '2012-04-24 11:29:52.675042', '2012-04-24 11:29:52.675042', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","name","content","user_id") VALUES (4, '2012-04-24 11:35:22.142043', '2012-04-24 11:35:47.570827', 'My Doc', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","name","content","user_id") VALUES (5, '2012-04-24 11:39:50.625201', '2012-04-24 11:39:50.625201', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","name","content","user_id") VALUES (6, '2012-04-24 11:40:25.795654', '2012-04-24 11:40:25.795654', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","name","content","user_id") VALUES (7, '2012-04-24 11:51:59.355090', '2012-04-24 11:51:59.355090', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","name","content","user_id") VALUES (8, '2012-04-24 11:54:03.806840', '2012-04-24 11:54:03.806840', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","name","content","user_id") VALUES (9, '2012-04-24 12:30:24.955097', '2012-04-24 12:30:24.955097', NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "altered_documents"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120424123409')[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_documents_on_user_id')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:34:19 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (8.2ms)
+Rendered documents/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:34:19 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (11.1ms)
+Rendered documents/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:34:19 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (7.4ms)
+Rendered documents/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:34:20 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:20 +1000 2012
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:34:20 +1000 2012
+Served asset /documents.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:34:20 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:20 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:20 +1000 2012
+Served asset /documents.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:20 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 22:34:25 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"Create Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"name"=>"fdfd", "content"=>"fdfd"}}
+WARNING: Can't mass-assign protected attributes: name, content
+  [1m[36mSQL (5.4ms)[0m  [1mINSERT INTO "documents" ("content", "created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", nil], ["created_at", Tue, 24 Apr 2012 12:34:25 UTC +00:00], ["name", nil], ["updated_at", Tue, 24 Apr 2012 12:34:25 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/10
+Completed 302 Found in 15ms
+
+
+Started GET "/documents/10" for 127.0.0.1 at Tue Apr 24 22:34:25 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "10"]]
+Rendered documents/show.html.erb within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined method `title' for #<Document:0x1114f7ad8>):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= @document.title %>
+    4: 
+    5: <%= link_to 'Edit', edit_document_path(@document) %> |
+    6: <%= link_to 'Back', documents_path %>
+  app/views/documents/show.html.erb:3:in `_app_views_documents_show_html_erb___539383825_2292589300'
+  app/controllers/documents_controller.rb:18:in `show'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/documents/" for 127.0.0.1 at Tue Apr 24 22:34:30 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 89ms
+
+ActionView::Template::Error (undefined method `title' for #<Document:0x1110ac4b0>):
+    9: 
+    10: <% @documents.each do |document| %>
+    11:   <tr>
+    12: 	<td><%= document.title %></td>
+    13:     <td><%= link_to 'Show', document %></td>
+    14:     <td><%= link_to 'Edit', edit_document_path(document) %></td>
+    15:     <td><%= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %></td>
+  app/views/documents/index.html.erb:12:in `_app_views_documents_index_html_erb__421414121_2294971540'
+  app/views/documents/index.html.erb:10:in `each'
+  app/views/documents/index.html.erb:10:in `_app_views_documents_index_html_erb__421414121_2294971540'
+  app/controllers/documents_controller.rb:7:in `index'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.2ms)
+
+
+Started GET "/documents/" for 127.0.0.1 at Tue Apr 24 22:34:43 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:34:43 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:34:43 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:34:43 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:43 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:43 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:43 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:43 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:34:48 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (6.5ms)
+Rendered documents/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:34:48 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:34:48 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:48 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:34:48 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:48 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:48 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:34:48 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 22:35:25 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"Create Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"name"=>"fdfd", "content"=>"fdfd"}}
+WARNING: Can't mass-assign protected attributes: name, content
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "documents" ("content", "created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", nil], ["created_at", Tue, 24 Apr 2012 12:35:25 UTC +00:00], ["name", nil], ["updated_at", Tue, 24 Apr 2012 12:35:25 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/11
+Completed 302 Found in 14ms
+
+
+Started GET "/documents/11" for 127.0.0.1 at Tue Apr 24 22:35:25 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "11"]]
+Rendered documents/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 95ms (Views: 91.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:35:25 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:35:25 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:35:25 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:35:25 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:35:25 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:35:25 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:35:25 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:35:27 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:35:27 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:35:27 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:35:27 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:35:27 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:35:27 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:35:27 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:35:27 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:43:09 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:09 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:09 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:09 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:09 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:09 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:10 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:10 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:43:12 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (8.1ms)
+Rendered documents/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:12 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:12 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:12 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:12 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:12 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:12 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:12 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 22:43:14 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"Create Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"name"=>"fdf", "content"=>"fdfd"}}
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "documents" ("content", "created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "fdfd"], ["created_at", Tue, 24 Apr 2012 12:43:14 UTC +00:00], ["name", "fdf"], ["updated_at", Tue, 24 Apr 2012 12:43:14 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/12
+Completed 302 Found in 14ms
+
+
+Started GET "/documents/12" for 127.0.0.1 at Tue Apr 24 22:43:14 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "12"]]
+Rendered documents/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:14 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:14 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:14 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:14 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:14 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:14 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:14 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:43:15 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:16 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:16 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:16 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:16 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:43:16 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:16 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:43:16 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:46:15 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:46:16 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:46:16 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:46:16 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:46:16 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:46:16 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:46:16 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:46:16 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:46:18 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (8.3ms)
+Rendered documents/new.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `title' for #<Document:0x111572ad0>):
+    13: 
+    14: 	<div class="field">
+    15: 		<%= f.label :title %><br />
+    16: 		<%= f.text_field :title %>
+    17: 	</div>
+    18: 	
+    19: 	<div class="field">
+  app/views/documents/_form.html.erb:16:in `_app_views_documents__form_html_erb__1700989533_2292830940'
+  app/views/documents/_form.html.erb:1:in `_app_views_documents__form_html_erb__1700989533_2292830940'
+  app/views/documents/new.html.erb:3:in `_app_views_documents_new_html_erb___942467577_2292496780'
+  app/controllers/documents_controller.rb:29:in `new'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.5ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_documents_on_user_id')
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20120420113236)
+Migrating to CreateDocuments (20120422040213)
+Migrating to HoboMigration1 (20120423122529)
+Migrating to HoboMigration2 (20120424033026)
+Migrating to HoboMigration3 (20120424123409)
+Migrating to HoboMigration4 (20120424124747)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.6ms)[0m  [1mCREATE TEMPORARY TABLE "altered_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "content" text, "user_id" integer) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_documents_on_user_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_documents")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "temp_index_altered_documents_on_user_id" ON "altered_documents" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "documents"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (1, '2012-04-24 03:35:32.770794', '2012-04-24 03:35:32.770794', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (2, '2012-04-24 11:10:53.827933', '2012-04-24 11:10:53.827933', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (3, '2012-04-24 11:29:52.675042', '2012-04-24 11:29:52.675042', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (4, '2012-04-24 11:35:22.142043', '2012-04-24 11:35:47.570827', 'My Doc', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (5, '2012-04-24 11:39:50.625201', '2012-04-24 11:39:50.625201', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (6, '2012-04-24 11:40:25.795654', '2012-04-24 11:40:25.795654', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (7, '2012-04-24 11:51:59.355090', '2012-04-24 11:51:59.355090', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (8, '2012-04-24 11:54:03.806840', '2012-04-24 11:54:03.806840', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (9, '2012-04-24 12:30:24.955097', '2012-04-24 12:30:24.955097', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (10, '2012-04-24 12:34:25.316306', '2012-04-24 12:34:25.316306', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (11, '2012-04-24 12:35:25.400278', '2012-04-24 12:35:25.400278', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_documents" ("id","created_at","updated_at","title","content","user_id") VALUES (12, '2012-04-24 12:43:14.339941', '2012-04-24 12:43:14.339941', 'fdf', 'fdfd', NULL)
+  [1m[36m (0.7ms)[0m  [1mDROP TABLE "documents"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "content" text, "user_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("altered_documents")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('temp_index_altered_documents_on_user_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("documents")[0m
+  [1m[35m (0.3ms)[0m  CREATE INDEX "index_documents_on_user_id" ON "documents" ("user_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "altered_documents"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (1, '2012-04-24 03:35:32.770794', '2012-04-24 03:35:32.770794', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (2, '2012-04-24 11:10:53.827933', '2012-04-24 11:10:53.827933', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (3, '2012-04-24 11:29:52.675042', '2012-04-24 11:29:52.675042', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (4, '2012-04-24 11:35:22.142043', '2012-04-24 11:35:47.570827', 'My Doc', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (5, '2012-04-24 11:39:50.625201', '2012-04-24 11:39:50.625201', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (6, '2012-04-24 11:40:25.795654', '2012-04-24 11:40:25.795654', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (7, '2012-04-24 11:51:59.355090', '2012-04-24 11:51:59.355090', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (8, '2012-04-24 11:54:03.806840', '2012-04-24 11:54:03.806840', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (9, '2012-04-24 12:30:24.955097', '2012-04-24 12:30:24.955097', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (10, '2012-04-24 12:34:25.316306', '2012-04-24 12:34:25.316306', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (11, '2012-04-24 12:35:25.400278', '2012-04-24 12:35:25.400278', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "documents" ("id","created_at","updated_at","title","content","user_id") VALUES (12, '2012-04-24 12:43:14.339941', '2012-04-24 12:43:14.339941', 'fdf', 'fdfd', NULL)[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "altered_documents"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120424124747')[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("documents")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_documents_on_user_id')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:49:35 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (9.1ms)
+Rendered documents/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:49:35 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (8.6ms)
+Rendered documents/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:49:35 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:49:35 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:49:35 +1000 2012
+Served asset /documents.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:49:35 +1000 2012
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:49:35 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:49:36 +1000 2012
+Served asset /documents.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:49:36 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/documents" for 127.0.0.1 at Tue Apr 24 22:49:40 +1000 2012
+  Processing by DocumentsController#create as HTML
+  Parameters: {"commit"=>"Create Document", "authenticity_token"=>"gmEroE5mjnm6hsKvagAoBB/puzcCYmKPnNkKWLJEm0w=", "utf8"=>"\342\234\223", "document"=>{"title"=>"fdfd", "content"=>"fdfd"}}
+  [1m[36mSQL (10.6ms)[0m  [1mINSERT INTO "documents" ("content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "fdfd"], ["created_at", Tue, 24 Apr 2012 12:49:40 UTC +00:00], ["title", "fdfd"], ["updated_at", Tue, 24 Apr 2012 12:49:40 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/documents/13
+Completed 302 Found in 25ms
+
+
+Started GET "/documents/13" for 127.0.0.1 at Tue Apr 24 22:49:40 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "13"]]
+Rendered documents/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:49:41 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:49:41 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:49:41 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:49:41 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:49:41 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:49:41 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:49:41 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:49:42 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `name' for #<Document:0x10d047b40>):
+    10: 
+    11: <% @documents.each do |document| %>
+    12:   <tr>
+    13: 	<td><b><%= document.name %></b></td>
+    14:     <td><%= link_to 'Show', document %></td>
+    15:     <td><%= link_to 'Edit', edit_document_path(document) %></td>
+    16:     <td><%= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %></td>
+  app/views/documents/index.html.erb:13:in `_app_views_documents_index_html_erb__421414121_2256636240'
+  app/views/documents/index.html.erb:11:in `each'
+  app/views/documents/index.html.erb:11:in `_app_views_documents_index_html_erb__421414121_2256636240'
+  app/controllers/documents_controller.rb:7:in `index'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:50:08 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:08 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:08 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:08 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:08 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:08 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:09 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:09 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:50:11 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:12 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:12 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:12 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:12 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:12 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:12 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:12 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:50:15 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:15 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:15 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:15 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:15 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:15 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:16 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:16 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:50:18 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" [0m
+Rendered documents/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:18 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:18 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:18 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:18 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:18 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:19 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:19 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at Tue Apr 24 22:50:21 +1000 2012
+  Processing by DocumentsController#new as HTML
+Rendered documents/_form.html.erb (10.5ms)
+Rendered documents/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:21 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:21 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:21 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:21 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:21 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:21 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:21 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:50:22 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:22 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:22 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:22 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:22 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:50:22 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:22 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:50:22 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/4" for 127.0.0.1 at Tue Apr 24 22:51:15 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", "4"]]
+Rendered documents/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:15 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:15 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:15 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:15 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:15 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:15 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:15 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:51:17 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.2ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:17 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:17 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:17 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:17 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:17 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:17 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:17 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents/12" for 127.0.0.1 at Tue Apr 24 22:51:19 +1000 2012
+  Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", "12"]]
+Rendered documents/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:19 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:19 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:19 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:19 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:19 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:19 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:19 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/documents" for 127.0.0.1 at Tue Apr 24 22:51:20 +1000 2012
+  Processing by DocumentsController#index as HTML
+  [1m[35mDocument Load (0.1ms)[0m  SELECT "documents".* FROM "documents" 
+Rendered documents/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:20 +1000 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:20 +1000 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at Tue Apr 24 22:51:20 +1000 2012
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:20 +1000 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:20 +1000 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:20 +1000 2012
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Apr 24 22:51:20 +1000 2012
+Served asset /application.js - 304 Not Modified (0ms)
