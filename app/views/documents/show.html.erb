@@ -3,5 +3,9 @@
 <h1><%= @document.title %></h1>
 <p><%= @document.content %></p>
 
+<% @document.tags.each do |tag| %>
+<div class="tag"><%= tag.name %></div>
+<% end %>
+
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>

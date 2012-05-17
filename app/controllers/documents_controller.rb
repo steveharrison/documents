@@ -1,4 +1,8 @@
 class DocumentsController < ApplicationController
+  
+  before_filter :authenticate_user!
+  
+  
   # GET /documents
   # GET /documents.json
   def index
@@ -25,6 +29,8 @@ class DocumentsController < ApplicationController
   # GET /documents/new.json
   def new
     @document = Document.new
+    @document.user = current_user
+    @document.tags << Tag.new(:name => "Test Tag")
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,11 +46,19 @@ class DocumentsController < ApplicationController
   # POST /documents
   # POST /documents.json
   def create
+  	
     @document = Document.new(params[:document])
 
+  	taglist = JSON.parse(params[:tags])
+  	taglist.each do |tagname|
+  		if tag = Tag.where(:name => tagname)
+  			@document.tags << tag
+  		end
+  	end
+  	
     respond_to do |format|
       if @document.save
-        format.html { redirect_to @document, :notice => 'Document was successfully created.' }
+        format.html { redirect_to @document, :notice => taglist }
         format.json { render :json => @document, :status => :created, :location => @document }
       else
         format.html { render :action => "new" }

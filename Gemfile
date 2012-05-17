@@ -40,3 +40,4 @@ gem 'jquery-rails'
 
 gem 'devise'
 gem 'hobo_fields', '~> 1.4.0.pre4'
+gem "omniauth-facebook"

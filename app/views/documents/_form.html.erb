@@ -18,8 +18,16 @@
 	
 	<div class="field">
 		<%= f.label :content %><br/>
-		<%= f.text_field :content %>
+		<%= f.text_area :content %>
 	</div>
+	
+	<script>
+		$(document).ready(function() {
+			$("#tag-field").tag({ height: 80 });
+		});
+	</script>
+	
+	<div id="tag-field"></div>
 
   <div class="actions">
     <%= f.submit %>

@@ -5,14 +5,48 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+<script type="/json2.js"></script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+
+<link rel="stylesheet" href="/tags.css"/>
+<script src="/tags.js"></script>
+
+
+
 </head>
 <body>
 	
 	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-	
-<%= yield %>
+    
+    <ul class="menu lgray slide">
+    	<li><%= link_to "Main", "/" %></li>
+    	<li class="floatr"><%= link_to "New", new_document_path %></li>
+	<% if user_signed_in? %>
+		<li class="floatr">
+			<%= link_to current_user.fullname, "" %>
+			<ul>
+				<!--<li><a href=""><%= current_user.email %></a></li>-->
+				<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+			</ul>
+		
+		</li>
+		
+		<li><a>Search</a></li>
+	<% else %>
+		<li><%= link_to('Login', new_user_session_path)  %></li>
+	<% end %>
+    </ul>
 
+	<div id="content">	
+<%= yield %>
+</div>
 
 
 </body>

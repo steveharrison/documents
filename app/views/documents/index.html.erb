@@ -1,23 +1,16 @@
 <h1>Listing documents</h1>
 
-<table>
-  <tr>
-	<th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<% @edit_privileges = false %>
 <% @documents.each do |document| %>
-  <tr>
-	<td><b><%= document.title %></b></td>
-    <td><%= link_to 'Show', document %></td>
-    <td><%= link_to 'Edit', edit_document_path(document) %></td>
-    <td><%= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+	<article>	
+		<h2><%= link_to(document.title, document) %></h2>
+		<p class="summary"></p>
+	<% if @edit_privileges then %>
+    	<%= link_to 'Edit', edit_document_path(document), :class => "edit" %>
+    	<%= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
+    </article>
 
-<br />
+<% end %>
 
 <%= link_to 'New Document', new_document_path %>
