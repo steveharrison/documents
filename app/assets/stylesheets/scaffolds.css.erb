@@ -109,7 +109,7 @@ input.button {
 
 /** Login Fields **/
 
-input[type=email], input[type=text], input[type=password] {
+input[type=email], input[type=text], input[type=password], textarea {
 	font-size: 14px;
 	color: #8e8d8d;
 	font-family: "Droid Sans";
@@ -130,8 +130,6 @@ input[class=new_tag_input] {
 	padding: 0;
 	border: none;
 	box-shadow: none;
-	width: auto;
-	height: auto;
 }
 
 input[type=email] {
@@ -217,10 +215,30 @@ article h2 a {
 	color: black;
 }
 
-textarea {
-
+.field {
+	position: relative;
 }
 
+input#document_title {
+	width: 435px;
+}
+
+textarea#document_content {
+	width: 435px;	
+}
+
+#tag-field {
+	width:  479px !important;
+}
+
+form.new_document {
+	width: 500px;
+	margin: auto;
+	/*box-shadow: 0px 1px 10px #aaa;*/
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 20px;
+}
 
 
 /* reset --------------------------------- */
