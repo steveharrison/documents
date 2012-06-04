@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120512105447) do
+ActiveRecord::Schema.define(:version => 20120604164816) do
 
   create_table "documents", :force => true do |t|
     t.datetime "created_at"
@@ -18,6 +19,9 @@ ActiveRecord::Schema.define(:version => 20120512105447) do
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
+    t.string   "attachment_file_name"
+    t.datetime "attachment_updated_at"
+    t.string   "uuid"
   end
 
   add_index "documents", ["user_id"], :name => "index_documents_on_user_id"

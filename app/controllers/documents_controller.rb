@@ -1,5 +1,9 @@
+require 'crocodoc'
+
 class DocumentsController < ApplicationController
-  
+
+include Crocodoc
+    
   before_filter :authenticate_user!
   
   
@@ -7,7 +11,7 @@ class DocumentsController < ApplicationController
   # GET /documents.json
   def index
     @documents = Document.all
-
+	logger.debug("Hello")
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @documents }
@@ -29,9 +33,7 @@ class DocumentsController < ApplicationController
   # GET /documents/new.json
   def new
     @document = Document.new
-    @document.user = current_user
-    @document.tags << Tag.new(:name => "Test Tag")
-
+ 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @document }
@@ -46,9 +48,30 @@ class DocumentsController < ApplicationController
   # POST /documents
   # POST /documents.json
   def create
-  	
-    @document = Document.new(params[:document])
 
+    @document = Document.new(params[:document])
+    @document.user = current_user
+    
+    # Upload the document to Crocodoc and get the UUID 
+    
+    # Get the path for the temporary file and add the appropriate extension
+    tmp_file_path = params[:attachment].path
+    file_extension = params[:attachment].original_filename.scan(/\.\w+$/)[0]
+    File.rename(tmp_file_path, tmp_file_path + file_extension)
+    tmp_file_path += file_extension
+    
+    # Read the file
+    attachment = File.new(tmp_file_path, "r")
+    
+    # Upload the file to Crocodoc
+    uuid = upload(attachment)[:uuid]
+    
+    logger.debug "UUID returned is #{uuid}" 
+    
+    @document.uuid = uuid   
+	
+	# Tag List
+	
   	taglist = JSON.parse(params[:tags])
   	taglist.each do |tagname|
   		if tag = Tag.where(:name => tagname)
@@ -58,7 +81,7 @@ class DocumentsController < ApplicationController
   	
     respond_to do |format|
       if @document.save
-        format.html { redirect_to @document, :notice => taglist }
+        format.html { redirect_to @document, :notice => "" }
         format.json { render :json => @document, :status => :created, :location => @document }
       else
         format.html { render :action => "new" }

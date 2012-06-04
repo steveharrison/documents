@@ -18,5 +18,6 @@ class TagsController < ApplicationController
   		format.html # show.html.erb
   		format.json { render :json => @tag }
   	end
+  end
 
 end

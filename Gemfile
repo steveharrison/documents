@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.1.0'
 
+#gem 'bundler', '1.0.7' 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -41,3 +43,5 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'hobo_fields', '~> 1.4.0.pre4'
 gem "omniauth-facebook"
+gem 'paperclip'
+gem 'rest-client'
