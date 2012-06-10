@@ -11,7 +11,6 @@ include Crocodoc
   # GET /documents.json
   def index
     @documents = Document.all
-	logger.debug("Hello")
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @documents }
@@ -22,6 +21,9 @@ include Crocodoc
   # GET /documents/1.json
   def show
     @document = Document.find(params[:id])
+    
+    session = create_session(@document.uuid, :downloadable => true)[:session]
+    @embeddable_url = session_viewer_url(session)
 
     respond_to do |format|
       format.html # show.html.erb

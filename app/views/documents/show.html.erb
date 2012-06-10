@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <h1><%= @document.title %></h1>
-<p><%= @document.content %></p>
+<h2>Uploaded by <%= @document.user.fullname %></h2>
+
+<%= link_to 'Edit', edit_document_path(@document) %>
+
+
 
 <% @document.tags.each do |tag| %>
 <div class="tag"><%= tag.name %></div>
 <% end %>
 
+<iframe src="<%= @embeddable_url %>"></iframe>
+
 <!--  -->
 
-<%= link_to 'Edit', edit_document_path(@document) %> |
-<%= link_to 'Back', documents_path %>

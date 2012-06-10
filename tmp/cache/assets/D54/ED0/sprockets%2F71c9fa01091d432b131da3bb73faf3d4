@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1338567282.194048:@expires_in0:@value{	I"length:EFiÐ2I"digest;	F"%b6d1175668be3a18e02f6fbe835472e5I"source;	FI"Ð2/*
+o: ActiveSupport::Cache::Entry	:@created_atf1339327901.881312:@expires_in0:@value{	I"length:EFi©3I"digest;	F"%0d0d8e655e5673d2ac43566c01be4e25I"source;	FI"©3/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -18,6 +18,7 @@ body{ background: url(../images/body-bg.png); color:#838383; font:13px "Droid Sa
 
 #content {
 	width: 900px;
+	position:  relative;
 }
 
 input[type=text], textarea {
@@ -36,6 +37,24 @@ h2 {
 
 .box h1, h2, h3 {
 	margin-top: 0;
+}
+
+iframe {
+
+width: 600px;
+height: 100%;
+
+/* position: absolute;
+top: 0; bottom: 0;
+left: 0; right: 0; */
+
+margin: auto;
+border: 1px solid; #333;
+box-shadow
+}
+
+iframe {
+	background-color: black;
 }
 
 a{ text-decoration:none;}
@@ -514,4 +533,4 @@ form.new_document {
 .lgray p a:hover {
 	color:#555;
 }
-;	FI"_version;	F"%b066afd0b48053b89d0e5d8b3ef8a5e3:@compressedF
+;	FI"_version;	F"%8b558a30e4cccbe0b26555a2c44a691e:@compressedF

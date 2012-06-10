@@ -25,24 +25,29 @@ module Crocodoc
     :annotated => false,
 
     # Can users mark up the document? (Affects both #share and #get_session)
-    :editable => true,
+    :editable => false,
 
     # Whether or not a session user can download the document.
-    :downloadable => true
+    :downloadable => false
   }
 
   # "Upload and convert a file. This method will try to convert a file that has
   #  been referenced by a URL or has been uploaded via a POST request."
   def upload(url_or_file, options = {})
+  
   	Rails.logger.debug "upload method"
+  	
+  	parameters = {}
+    
+    parameters[:token] = API_OPTIONS[:token]
+    
     if url_or_file.is_a? String
-      options.merge! :url => url_or_file
+    	parameters[:url] = url_or_file
     else
-      options.merge! :file => url_or_file
+    	parameters[:file] = url_or_file
     end
-  _shake_and_stir_params(options, :url, :file, :title, :async, :private, :token)
-
-    _request("/document/upload", (options[:file] ? :post : :get), options)
+    
+    _request("/document/upload", :post, parameters)
   end
 
   # "Check the conversion status of a document."
@@ -89,24 +94,56 @@ module Crocodoc
 
   # "Creates a session ID for session-based document viewing. Each session ID
   #  may only be used once."
-  def get_session(uuid, options = {})
-    options.merge! :uuid => uuid
-    _shake_and_stir_params(options, :uuid, :token, :downloadable, :editable, :name)
-
-    _request("/session/get", :get, options)
+  
+  # Required Parameters:
+  #		uuid => [String]
+  
+  # Optional Parameters:
+  #		:user => {:name => "[User name to show in viewer]", :id => "[32-bit unique integer]"}
+  #		:editable => [Boolean, Default: false]
+  #		:filter => "[Either 'all', 'none', or User IDs separated by commas]"
+  #		:admin => [Boolean, Default: false]
+  #		:downloadable => [Boolean, Default: false]
+  #		:copyprotected => [Boolean, Default: false]
+  #		:demo => [Boolean, Default: false]
+  
+  def create_session(uuid, options = {})
+    
+    parameters = {}
+    
+    # token & user (required)
+    parameters[:token] = API_OPTIONS[:token]
+    parameters[:uuid] = uuid
+   	
+   	# user
+    if options[:user] then
+    	parameters[:user] = "#{options[:user][:id]},#{options[:user][:name]}"
+    end
+    
+    # editable
+    if options[:editable] then
+    	if options[:user] then
+    		parameters[:editable] = true
+    	else
+    		raise ArgumentError, "The 'user' parameter must be specified if 'editable' is true."
+    	end
+    end
+    
+   # downloadable
+   if options[:downloadable] == true then
+   		parameters[:downloadable] = true
+   end
+   
+   logger.debug("create_session: parameters: #{parameters}")
+   
+   # implement other options here
+ 	
+ 	_request("/session/create", :post, parameters)
   end
 
-  # "View an embedded document. This URL returns a web page that can be embedded
-  #  within an iframe."
-  def embeddable_viewer_url(shortId)
-    "http://crocodoc.com/#{shortId}?embedded=true"
-  end
-
-  # "View a document using session-based viewing. Session-based viewing enables
-  #  the embedding of private documents. To obtain session IDs, use the
-  #  session/get API method."
-  def session_based_viewer_url(sessionId)
-    "https://crocodoc.com/view/?sessionId=#{sessionId}"
+  # "Obtain the URL to the document viewer to embed in an <iframe>."
+  def session_viewer_url(session)
+    "https://crocodoc.com/view/#{session}"
   end
 
   private

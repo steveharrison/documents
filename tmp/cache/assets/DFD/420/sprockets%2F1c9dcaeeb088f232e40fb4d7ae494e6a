@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1338567280.6555352:@expires_in0:@value{I"
-class:EFI"BundledAsset;	FI"id;	F"%8f2b0fec685b1bbc019c5c7b7e467549I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
-mtime;	FI"2012-05-18T04:15:09+10:00;	FI"	body;	FI"“0/* @override 
+o: ActiveSupport::Cache::Entry	:@created_atf1339327901.2566028:@expires_in0:@value{I"
+class:EFI"BundledAsset;	FI"id;	F"%c8538a98620f1bfe1d67b4da60021241I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
+mtime;	FI"2012-06-10T21:31:38+10:00;	FI"	body;	FI"´1/* @override 
 	http://localhost:3000/assets/scaffolds.css?body=1 */
 
 
@@ -8,6 +8,7 @@ body{ background: url(../images/body-bg.png); color:#838383; font:13px "Droid Sa
 
 #content {
 	width: 900px;
+	position:  relative;
 }
 
 input[type=text], textarea {
@@ -26,6 +27,24 @@ h2 {
 
 .box h1, h2, h3 {
 	margin-top: 0;
+}
+
+iframe {
+
+width: 600px;
+height: 100%;
+
+/* position: absolute;
+top: 0; bottom: 0;
+left: 0; right: 0; */
+
+margin: auto;
+border: 1px solid; #333;
+box-shadow
+}
+
+iframe {
+	background-color: black;
 }
 
 a{ text-decoration:none;}
@@ -505,4 +524,4 @@ form.new_document {
 	color:#555;
 }
 ;	FI"asset_paths;	F[I"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"dependency_paths;	F[{I"	path;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"
-mtime;	FIu:	Time2Ä  ê<:@_zoneI"EST;	T:offseti†åI"hexdigest;	F"%78d1e9ed8da911974f148d145a9006ebI"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF
+mtime;	FIu:	TimeKÄ  `~:@_zoneI"EST;	T:offseti†åI"hexdigest;	F"%2ccb47d375d60193ba27bfcb3256a397I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF

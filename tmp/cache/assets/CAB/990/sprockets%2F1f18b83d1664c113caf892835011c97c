@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1338567282.601173:@expires_in0:@value{	I"length:EFiÒ0I"digest;	F"%6f56dcad17000e174647cfbc6b47ac38I"source;	FI"Ò0/* @override 
+o: ActiveSupport::Cache::Entry	:@created_atf1339327901.902318:@expires_in0:@value{	I"length:EFi«1I"digest;	F"%aed2cdcc35ccd97db2f0749f7d16d94fI"source;	FI"«1/* @override 
 	http://localhost:3000/assets/scaffolds.css?body=1 */
 
 
@@ -6,6 +6,7 @@ body{ background: url(../images/body-bg.png); color:#838383; font:13px "Droid Sa
 
 #content {
 	width: 900px;
+	position:  relative;
 }
 
 input[type=text], textarea {
@@ -24,6 +25,24 @@ h2 {
 
 .box h1, h2, h3 {
 	margin-top: 0;
+}
+
+iframe {
+
+width: 600px;
+height: 100%;
+
+/* position: absolute;
+top: 0; bottom: 0;
+left: 0; right: 0; */
+
+margin: auto;
+border: 1px solid; #333;
+box-shadow
+}
+
+iframe {
+	background-color: black;
 }
 
 a{ text-decoration:none;}
@@ -502,4 +521,4 @@ form.new_document {
 .lgray p a:hover {
 	color:#555;
 }
-;	FI"_version;	F"%8f2b0fec685b1bbc019c5c7b7e467549:@compressedF
+;	FI"_version;	F"%c8538a98620f1bfe1d67b4da60021241:@compressedF
