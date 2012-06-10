@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1339327901.881312:@expires_in0:@value{	I"length:EFi©3I"digest;	F"%0d0d8e655e5673d2ac43566c01be4e25I"source;	FI"©3/*
+o: ActiveSupport::Cache::Entry	:@created_atf1339349190.524977:@expires_in0:@value{	I"length:EFi¯4I"digest;	F"%a27368bf8d3ca4e67bd7a98252630ed0I"source;	FI"¯4/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -14,11 +14,58 @@
 	http://localhost:3000/assets/scaffolds.css?body=1 */
 
 
-body{ background: url(../images/body-bg.png); color:#838383; font:13px "Droid Sans", Arial, Helvetica, sans-serif;}
+body {
+	color:#838383;
+	font: 13px "Droid Sans", Arial, Helvetica, sans-serif;
+	margin: 0;
+}
 
+/* Header */
+
+header {
+	height: 60px;
+	background-color: white;
+	z-index: 10;
+}
+
+header ul {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+ul.menu.lgray.slide {
+	margin: 20px;
+}
+
+.preview-frame {
+	background-color: white !important;
+}
+
+#sidebar {
+	float: left;
+	width: 200px;
+	margin-right: 40px;
+}
+
+#sidebar nav {
+	position: fixed;
+}
+
+/* Content */
 #content {
-	width: 900px;
-	position:  relative;
+	width: 840px;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#page {
+	width: 600px;
+	float: right;
+}
+
+#page article {
 }
 
 input[type=text], textarea {
@@ -26,9 +73,6 @@ input[type=text], textarea {
 	font: 12px tahoma, arial;
 	margin-top: 20px;
 	margin-bottom: 20px;
-}
-
-h1, h2, h3 {
 }
 
 h2 {
@@ -40,21 +84,8 @@ h2 {
 }
 
 iframe {
-
-width: 600px;
-height: 100%;
-
-/* position: absolute;
-top: 0; bottom: 0;
-left: 0; right: 0; */
-
-margin: auto;
-border: 1px solid; #333;
-box-shadow
-}
-
-iframe {
-	background-color: black;
+	width: 100%;
+	border: 1px solid; #333;
 }
 
 a{ text-decoration:none;}
@@ -533,4 +564,4 @@ form.new_document {
 .lgray p a:hover {
 	color:#555;
 }
-;	FI"_version;	F"%8b558a30e4cccbe0b26555a2c44a691e:@compressedF
+;	FI"_version;	F"%0cf3de0796d023b9eaa948b40a7d4a2f:@compressedF

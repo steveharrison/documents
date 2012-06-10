@@ -1,14 +1,61 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1339327901.2566028:@expires_in0:@value{I"
-class:EFI"BundledAsset;	FI"id;	F"%c8538a98620f1bfe1d67b4da60021241I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
-mtime;	FI"2012-06-10T21:31:38+10:00;	FI"	body;	FI"«1/* @override 
+o: ActiveSupport::Cache::Entry	:@created_atf1339349190.370541:@expires_in0:@value{I"
+class:EFI"BundledAsset;	FI"id;	F"%48f630dc2abe8aa7e07caae42352f024I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
+mtime;	FI"2012-06-11T03:26:29+10:00;	FI"	body;	FI"±2/* @override 
 	http://localhost:3000/assets/scaffolds.css?body=1 */
 
 
-body{ background: url(../images/body-bg.png); color:#838383; font:13px "Droid Sans", Arial, Helvetica, sans-serif;}
+body {
+	color:#838383;
+	font: 13px "Droid Sans", Arial, Helvetica, sans-serif;
+	margin: 0;
+}
 
+/* Header */
+
+header {
+	height: 60px;
+	background-color: white;
+	z-index: 10;
+}
+
+header ul {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+ul.menu.lgray.slide {
+	margin: 20px;
+}
+
+.preview-frame {
+	background-color: white !important;
+}
+
+#sidebar {
+	float: left;
+	width: 200px;
+	margin-right: 40px;
+}
+
+#sidebar nav {
+	position: fixed;
+}
+
+/* Content */
 #content {
-	width: 900px;
-	position:  relative;
+	width: 840px;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#page {
+	width: 600px;
+	float: right;
+}
+
+#page article {
 }
 
 input[type=text], textarea {
@@ -16,9 +63,6 @@ input[type=text], textarea {
 	font: 12px tahoma, arial;
 	margin-top: 20px;
 	margin-bottom: 20px;
-}
-
-h1, h2, h3 {
 }
 
 h2 {
@@ -30,21 +74,8 @@ h2 {
 }
 
 iframe {
-
-width: 600px;
-height: 100%;
-
-/* position: absolute;
-top: 0; bottom: 0;
-left: 0; right: 0; */
-
-margin: auto;
-border: 1px solid; #333;
-box-shadow
-}
-
-iframe {
-	background-color: black;
+	width: 100%;
+	border: 1px solid; #333;
 }
 
 a{ text-decoration:none;}
@@ -524,4 +555,4 @@ form.new_document {
 	color:#555;
 }
 ;	FI"asset_paths;	F[I"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"dependency_paths;	F[{I"	path;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"
-mtime;	FIu:	TimeK€  `~:@_zoneI"EST;	T:offseti ŒI"hexdigest;	F"%2ccb47d375d60193ba27bfcb3256a397I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF
+mtime;	FIu:	TimeQ€  Ði:@_zoneI"EST;	T:offseti ŒI"hexdigest;	F"%e4c50f74a601c6aa69c6e357f451aa86I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF

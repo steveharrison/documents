@@ -1,11 +1,86 @@
 /* @override 
 	http://localhost:3000/assets/scaffolds.css?body=1 */
 
-body{ background: url(../images/body-bg.png); color:#838383; font:13px "Droid Sans", Arial, Helvetica, sans-serif;}
+body {
+	color:#838383;
+	font: 13px "Droid Sans", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
 
+/* Header */
+
+header {
+	height: 60px;
+	background-color: white;
+	z-index: 10;
+}
+
+header ul.menu.lgray.slide {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	/margin: 0 20px 0 20px;
+}
+
+.preview-frame {
+	background-color: white !important;
+}
+
+#sidebar {
+	float: left;
+	width: 200px;
+	margin-right: 40px;
+}
+
+#sidebar nav {
+	position: fixed;
+}
+
+/* Content */
 #content {
-	width: 900px;
-	position:  relative;
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top:50px;
+	bottom: 0;
+	width: 840px;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#page {
+	width: 600px;
+	right: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+article {
+	box-shadow: 0px 2px 3px #888;
+}
+
+.docviewer {
+	position: absolute;
+	top: 120px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.doc {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.document-info h1 {
+	margin-top: 0;
+}
+
+#page article {
 }
 
 input[type=text], textarea {
@@ -13,9 +88,6 @@ input[type=text], textarea {
 	font: 12px tahoma, arial;
 	margin-top: 20px;
 	margin-bottom: 20px;
-}
-
-h1, h2, h3 {
 }
 
 h2 {
@@ -27,21 +99,12 @@ h2 {
 }
 
 iframe {
-
-width: 600px;
-height: 100%;
-
-/* position: absolute;
-top: 0; bottom: 0;
-left: 0; right: 0; */
-
-margin: auto;
-border: 1px solid; #333;
-box-shadow
-}
-
-iframe {
-	background-color: black;
+	width: 100%;
+	height: 80%;
+	border: 1px solid; #333;
+	position: fixed;
+	right: 0;
+	bottom: 0;
 }
 
 a{ text-decoration:none;}

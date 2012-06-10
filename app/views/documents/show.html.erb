@@ -1,17 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @document.title %></h1>
-<h2>Uploaded by <%= @document.user.fullname %></h2>
+<article>
 
-<%= link_to 'Edit', edit_document_path(@document) %>
+<div class="document-info">
+	
+	<h1><%= @document.title %></h1>
+	<span class="author">Uploaded by <%= @document.user.fullname %></span>
+	
+	<% if current_user == @document.user %>
+	<div class="button blue"><%= link_to 'Edit', edit_document_path(@document) %></div>
+	<% end %>
+	
+	<div class="button blue"><%= link_to "Copy Short URL", @document %></div>
+	
+	<div id="tags">
+	<% @document.tags.each do |tag| %>
+		<div class="tag"><%= tag.name %></div>
+	<% end %>
+		<div class="tag">Example Tag 1</div>
+		<div class="tag">Example Tag 2</div>
+	</div>
+
+</div>
+
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+  <script src="//static-v2.crocodoc.com/core/docviewer.js"></script>
+  <script src="//crocodoc.com/webservice/document.js?session=ar-o0-vKkBukJyQI_uVTs2xyT1G9HYB8gFvkKmFNsitVmaJALCtiVxoLvIv5IZGBULGKuYXIzglKPtiku1c5LvJ8HYx6a0G6lYqLdQ"></script>
+
+  <!--custom CSS-->
+  <style type="text/css">
+    /*background*/
+    #DocViewer .doc { background:#E9F4FF; }
+
+    /*page borders*/
+    #DocViewer .page { box-shadow:1px 1px 3px #999; outline:none; }
+  </style>
+
+  <!--div for viewer-->
+  <div id="DocViewer"></div>
+
+  <script type="text/javascript">
+    //creates a document viewer using the "DocViewer" div
+    var docviewer = new DocViewer({ "id": "DocViewer" });
+  </script>
 
 
+<!-- <iframe src="<%= @embeddable_url %>"></iframe> -->
 
-<% @document.tags.each do |tag| %>
-<div class="tag"><%= tag.name %></div>
-<% end %>
-
-<iframe src="<%= @embeddable_url %>"></iframe>
-
-<!--  -->
-
+</article>
