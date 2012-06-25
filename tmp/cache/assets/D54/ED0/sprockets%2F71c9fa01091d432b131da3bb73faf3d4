@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1339993169.742181:@expires_in0:@value{	I"length:EFiL;I"digest;	F"%37a8c24c307367683857a8f17f424015I"source;	FI"L;/*
+o: ActiveSupport::Cache::Entry	:@created_atf1340641909.616797:@expires_in0:@value{	I"length:EFi*:I"digest;	F"%01c32bd17e36f8397fefa5db91b03ebfI"source;	FI"*:/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -14,12 +14,17 @@
 	http://localhost:3000/assets/scaffolds.css?body=1 */
 
 
+html {
+	overflow: scroll;
+}
+
 body {
 	color:#838383;
 	font: 13px "Droid Sans", Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
 	background-color: #edeceb;
+	overflow: hidden;
 }
 
 .tags {
@@ -75,62 +80,42 @@ header ul.menu.lgray.slide {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	/margin: 0 20px 0 20px;
+	/* margin: 0 20px 0 20px; */
 }
 
 .preview-frame {
 	background-color: white !important;
 }
 
-#sidebar {
-	float: left;
-	width: 200px;
-	margin-right: 40px;
-}
-
 #sidebar nav {
+	width: 170px;
 	position: fixed;
+	height: 100%;
+	border-right: 1px solid #ccc;
+	padding: 10px;
 }
 
 /* Content */
 #content {
 	position: absolute;
-	left: 10px;
-	right: 10px;
-	top:50px;
-	bottom: 0;
-	width: 840px;
-	margin: auto;
-	padding-left: 20px;
-	padding-right: 20px;
-	background: white;
-	bo2x-shadow: 0px 3px 5px #444;
-	border: 1px solid #ccc;
-}
-
-
-#page {
-	width: 600px;
-	right: 0;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	border-left: 1px dashed #ece7e7;
-}
-
-article {
-}
-
-.docviewer {
-	position: absolute;
-	top: 120px;
+	top: 60px;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	-moz-box-shadow: inset 0 1px 5px black;
-	-webkit-box-shadow: inset 0 1px 5px black;
-	box-shadow: inset 0 1px 5px black;
-	z-index: 10000;
+	background: white;
+}
+
+
+.docviewer {
+}
+
+#page, #document-container {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 180px;
+right: 0;
+z-index: 10000;
 }
 
 .page-outer, .page {
@@ -653,4 +638,4 @@ form.new_document {
 .lgray p a:hover {
 	color:#555;
 }
-;	FI"_version;	F"%40ea41e9988be8274c9566fab7276327:@compressedF
+;	FI"_version;	F"%aa03b0bf08805dda3a9562425cca60ad:@compressedF
