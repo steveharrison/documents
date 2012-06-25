@@ -1,0 +1,7 @@
+
+<h1>Documents tagged '<%= @tag.name %>'</h1>
+<ul>
+<% @tag.documents.each do |document| %>
+	<li><%= link_to document.title, document %></li>
+<% end %>
+</ul>

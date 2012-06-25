@@ -28,6 +28,14 @@
    <header>
     <ul class="menu lgray slide">
     	<li><%= link_to "Main", "/" %></li>
+    	<li>
+    		<%= link_to "Tags", "/tags" %>
+    		<ul>
+    			<% Tag.all.each do |tag| %>
+    				<li><%= link_to tag.name, tag %></li>
+    			<% end %>
+    		</ul>
+    	</li>
     	<li class="floatr"><%= link_to "New", new_document_path %></li>
 	<% if user_signed_in? %>
 		<li class="floatr">

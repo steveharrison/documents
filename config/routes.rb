@@ -1,7 +1,7 @@
 Documents::Application.routes.draw do
   resources :documents
   
-  resources :tags
+  resources :tags, :only => [:index, :show]
   
   
 

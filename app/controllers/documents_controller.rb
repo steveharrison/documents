@@ -22,7 +22,7 @@ include Crocodoc
   def show
     @document = Document.find(params[:id])
     
-    session = create_session(@document.uuid, :downloadable => true)[:session]
+    @session = create_session(@document.uuid, :downloadable => true)[:session]
     @embeddable_url = session_viewer_url(session)
 
     respond_to do |format|
@@ -75,10 +75,11 @@ include Crocodoc
 	# Tag List
 	
   	taglist = JSON.parse(params[:tags])
+  	logger.debug "Taglist: #{taglist}"
   	taglist.each do |tagname|
-  		if tag = Tag.where(:name => tagname)
-  			@document.tags << tag
-  		end
+  		tag = Tag.where(:name => tagname) || Tag.new(:name => tagname)
+  		@document.tags << tag
+  		logger.debug "Assigning tag '#{tagname}' to document (#{@document.id})"
   	end
   	
     respond_to do |format|

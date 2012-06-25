@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1339349190.370541:@expires_in0:@value{I"
-class:EFI"BundledAsset;	FI"id;	F"%48f630dc2abe8aa7e07caae42352f024I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
-mtime;	FI"2012-06-11T03:26:29+10:00;	FI"	body;	FI"±2/* @override 
+o: ActiveSupport::Cache::Entry	:@created_atf1339993169.4928808:@expires_in0:@value{I"
+class:EFI"BundledAsset;	FI"id;	F"%68d8545c64829996821583eaad387ebdI"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
+mtime;	FI"2012-06-17T04:10:51+10:00;	FI"	body;	FI"N9/* @override 
 	http://localhost:3000/assets/scaffolds.css?body=1 */
 
 
@@ -8,24 +8,64 @@ body {
 	color:#838383;
 	font: 13px "Droid Sans", Arial, Helvetica, sans-serif;
 	margin: 0;
+	padding: 0;
+	background-color: #edeceb;
+}
+
+.tags {
+	background-color: rgba(239, 177, 22, 0.16);
+	padding: 8px;
+}
+
+input.tag-input {
+	margin: 0px !important;
+	padding: 4px !important;
+	border-radius: 0px !important;
+	border: none !important;
+	background: none !important;
+	box-shadow: none !important;
+}
+
+input.tag-input:focus{
+	outline: 4px black !important;
+}
+
+.tag-box {
+	margin: 20px;
+	border: 1px solid #f6dc92;
+}
+
+.tag-tag {
+	border-radius: 2px;
+	display: inline-block;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#fbcd7b), to(#fbe1b5));
+	background-image: -moz-linear-gradient(90deg, #fbcd7b 0%, #fbe1b5 100%);
+	opacity: 1;
+	color: #b38114;
+	padding: 2px 5px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.72);
+	border: 1px solid #c68c0c;
+	font: bold 12px helveticaneue;
+	margin-right: 4px;
+}
+
+.tag-tag:hover {
+background-image: -webkit-gradient(linear, left bottom, left top, from(#ffcb6e), to(#fbc36e));
+background-image: -moz-linear-gradient(90deg, #ffcb6e 0%, #fbc36e 100%);	
 }
 
 /* Header */
 
 header {
 	height: 60px;
-	background-color: white;
 	z-index: 10;
 }
 
-header ul {
+header ul.menu.lgray.slide {
 	position: fixed;
 	top: 0;
 	width: 100%;
-}
-
-ul.menu.lgray.slide {
-	margin: 20px;
+	/margin: 0 20px 0 20px;
 }
 
 .preview-frame {
@@ -44,15 +84,60 @@ ul.menu.lgray.slide {
 
 /* Content */
 #content {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top:50px;
+	bottom: 0;
 	width: 840px;
 	margin: auto;
 	padding-left: 20px;
 	padding-right: 20px;
+	background: white;
+	bo2x-shadow: 0px 3px 5px #444;
+	border: 1px solid #ccc;
 }
+
 
 #page {
 	width: 600px;
-	float: right;
+	right: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	border-left: 1px dashed #ece7e7;
+}
+
+article {
+}
+
+.docviewer {
+	position: absolute;
+	top: 120px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-moz-box-shadow: inset 0 1px 5px black;
+	-webkit-box-shadow: inset 0 1px 5px black;
+	box-shadow: inset 0 1px 5px black;
+	z-index: 10000;
+}
+
+.page-outer, .page {
+	z-index: -20 !important;
+}
+
+
+.doc {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: none !important;
+	z-index: -4;
+}
+
+.document-info h1 {
+	margin-top: 0;
 }
 
 #page article {
@@ -75,7 +160,11 @@ h2 {
 
 iframe {
 	width: 100%;
+	height: 80%;
 	border: 1px solid; #333;
+	position: fixed;
+	right: 0;
+	bottom: 0;
 }
 
 a{ text-decoration:none;}
@@ -555,4 +644,4 @@ form.new_document {
 	color:#555;
 }
 ;	FI"asset_paths;	F[I"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"dependency_paths;	F[{I"	path;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"
-mtime;	FIu:	TimeQ€  Ði:@_zoneI"EST;	T:offseti ŒI"hexdigest;	F"%e4c50f74a601c6aa69c6e357f451aa86I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF
+mtime;	FIu:	Time€  0+:@_zoneI"EST;	T:offseti ŒI"hexdigest;	F"%3f9744a4fbe8a05bd30378a47ced8509I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF
