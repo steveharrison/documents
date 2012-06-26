@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1340641909.616797:@expires_in0:@value{	I"length:EFi*:I"digest;	F"%01c32bd17e36f8397fefa5db91b03ebfI"source;	FI"*:/*
+o: ActiveSupport::Cache::Entry	:@created_atf1340689267.590288:@expires_in0:@value{	I"length:EFi¡:I"digest;	F"%dec4eebeed36e480393b10c28d5719faI"source;	FI"¡:/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -10,6 +10,10 @@
  *
 */
 
+/* line 5, ../../app/assets/stylesheets/documents.css.scss */
+body {
+  background-color: black;
+}
 /* @override 
 	http://localhost:3000/assets/scaffolds.css?body=1 */
 
@@ -71,12 +75,8 @@ background-image: -moz-linear-gradient(90deg, #ffcb6e 0%, #fbc36e 100%);
 
 /* Header */
 
-header {
-	height: 60px;
-	z-index: 10;
-}
-
 header ul.menu.lgray.slide {
+	z-index: 2000000000;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -98,7 +98,7 @@ header ul.menu.lgray.slide {
 /* Content */
 #content {
 	position: absolute;
-	top: 60px;
+	top: 50px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -113,7 +113,7 @@ header ul.menu.lgray.slide {
 position: absolute;
 top: 0;
 bottom: 0;
-left: 180px;
+left: 191px;
 right: 0;
 z-index: 10000;
 }
@@ -125,11 +125,16 @@ z-index: 10000;
 
 .doc {
 	position: absolute;
+	top: 0;
 	width: 100%;
 	height: 100%;
-	background: none !important;
 	z-index: -4;
 }
+
+.doc .page {
+box-shadow:1px 1px 3px #999; outline:none;	
+}
+
 
 .document-info h1 {
 	margin-top: 0;
@@ -638,4 +643,4 @@ form.new_document {
 .lgray p a:hover {
 	color:#555;
 }
-;	FI"_version;	F"%aa03b0bf08805dda3a9562425cca60ad:@compressedF
+;	FI"_version;	F"%00f9f96932e66f42628bab64b2b6aacc:@compressedF

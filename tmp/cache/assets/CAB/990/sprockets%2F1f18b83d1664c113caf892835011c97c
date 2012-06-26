@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1340641909.67045:@expires_in0:@value{	I"length:EFi,8I"digest;	F"%e7570d3357802a38a071d001f55f1ec6I"source;	FI",8/* @override 
+o: ActiveSupport::Cache::Entry	:@created_atf1340689267.6866329:@expires_in0:@value{	I"length:EFiA8I"digest;	F"%a50fb8ea86222524e66c06ac4ff4badcI"source;	FI"A8/* @override 
 	http://localhost:3000/assets/scaffolds.css?body=1 */
 
 
@@ -59,12 +59,8 @@ background-image: -moz-linear-gradient(90deg, #ffcb6e 0%, #fbc36e 100%);
 
 /* Header */
 
-header {
-	height: 60px;
-	z-index: 10;
-}
-
 header ul.menu.lgray.slide {
+	z-index: 2000000000;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -86,7 +82,7 @@ header ul.menu.lgray.slide {
 /* Content */
 #content {
 	position: absolute;
-	top: 60px;
+	top: 50px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -101,7 +97,7 @@ header ul.menu.lgray.slide {
 position: absolute;
 top: 0;
 bottom: 0;
-left: 180px;
+left: 191px;
 right: 0;
 z-index: 10000;
 }
@@ -113,11 +109,16 @@ z-index: 10000;
 
 .doc {
 	position: absolute;
+	top: 0;
 	width: 100%;
 	height: 100%;
-	background: none !important;
 	z-index: -4;
 }
+
+.doc .page {
+box-shadow:1px 1px 3px #999; outline:none;	
+}
+
 
 .document-info h1 {
 	margin-top: 0;
@@ -626,4 +627,4 @@ form.new_document {
 .lgray p a:hover {
 	color:#555;
 }
-;	FI"_version;	F"%75a7600b41b96a52b40f8be24c82a4ee:@compressedF
+;	FI"_version;	F"%777d99699b38abc9e0337f31083267d1:@compressedF

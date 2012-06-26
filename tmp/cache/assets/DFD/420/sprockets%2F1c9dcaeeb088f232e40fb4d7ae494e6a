@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1340641909.291903:@expires_in0:@value{I"
-class:EFI"BundledAsset;	FI"id;	F"%75a7600b41b96a52b40f8be24c82a4eeI"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
-mtime;	FI"2012-06-26T02:31:43+10:00;	FI"	body;	FI",8/* @override 
+o: ActiveSupport::Cache::Entry	:@created_atf1340689267.383431:@expires_in0:@value{I"
+class:EFI"BundledAsset;	FI"id;	F"%777d99699b38abc9e0337f31083267d1I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
+mtime;	FI"2012-06-26T15:40:14+10:00;	FI"	body;	FI"A8/* @override 
 	http://localhost:3000/assets/scaffolds.css?body=1 */
 
 
@@ -61,12 +61,8 @@ background-image: -moz-linear-gradient(90deg, #ffcb6e 0%, #fbc36e 100%);
 
 /* Header */
 
-header {
-	height: 60px;
-	z-index: 10;
-}
-
 header ul.menu.lgray.slide {
+	z-index: 2000000000;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -88,7 +84,7 @@ header ul.menu.lgray.slide {
 /* Content */
 #content {
 	position: absolute;
-	top: 60px;
+	top: 50px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -103,7 +99,7 @@ header ul.menu.lgray.slide {
 position: absolute;
 top: 0;
 bottom: 0;
-left: 180px;
+left: 191px;
 right: 0;
 z-index: 10000;
 }
@@ -115,11 +111,16 @@ z-index: 10000;
 
 .doc {
 	position: absolute;
+	top: 0;
 	width: 100%;
 	height: 100%;
-	background: none !important;
 	z-index: -4;
 }
+
+.doc .page {
+box-shadow:1px 1px 3px #999; outline:none;	
+}
+
 
 .document-info h1 {
 	margin-top: 0;
@@ -629,4 +630,4 @@ form.new_document {
 	color:#555;
 }
 ;	FI"asset_paths;	F[I"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"dependency_paths;	F[{I"	path;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"
-mtime;	FIu:	Time0€  °~:@_zoneI"EST;	T:offseti ŒI"hexdigest;	F"%11a703e1a330952de754373f6acc8fe7I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF
+mtime;	FIu:	TimeE€  à :@_zoneI"EST;	T:offseti ŒI"hexdigest;	F"%8076fe4e06cf35fe40e237d50f12afc5I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF

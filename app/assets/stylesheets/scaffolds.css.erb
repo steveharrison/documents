@@ -58,12 +58,8 @@ background-image: -moz-linear-gradient(90deg, #ffcb6e 0%, #fbc36e 100%);
 
 /* Header */
 
-header {
-	height: 60px;
-	z-index: 10;
-}
-
 header ul.menu.lgray.slide {
+	z-index: 2000000000;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -74,10 +70,11 @@ header ul.menu.lgray.slide {
 	background-color: white !important;
 }
 
-#sidebar nav {
+#sidebar {
 	width: 170px;
-	position: fixed;
 	height: 100%;
+	top: 0;
+	position: absolute;
 	border-right: 1px solid #ccc;
 	padding: 10px;
 }
@@ -85,7 +82,7 @@ header ul.menu.lgray.slide {
 /* Content */
 #content {
 	position: absolute;
-	top: 60px;
+	top: 50px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -100,7 +97,7 @@ header ul.menu.lgray.slide {
 position: absolute;
 top: 0;
 bottom: 0;
-left: 180px;
+left: 191px;
 right: 0;
 z-index: 10000;
 }
@@ -112,11 +109,16 @@ z-index: 10000;
 
 .doc {
 	position: absolute;
+	top: 0;
 	width: 100%;
 	height: 100%;
-	background: none !important;
 	z-index: -4;
 }
+
+.doc .page {
+box-shadow:1px 1px 3px #999; outline:none;	
+}
+
 
 .document-info h1 {
 	margin-top: 0;
