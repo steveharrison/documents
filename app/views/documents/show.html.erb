@@ -7,21 +7,29 @@
 <aside id="sidebar">
    
    <h1><%= @document.title %></h1>
-   <p>Uploaded by <%= @document.user.fullname %></p>
-   <p>Rating: xxxx</p>
-   <p>Social Media...</p>
+<!--   <p>Uploaded by <%= @document.user.fullname %></p>
+   <p>Rating: ****</p>-->
+   
+   <div id="tags">
+   <% @document.tags.each do |tag| %>
+   	<div class="tag"><%= tag.name %></div>
+   <% end %>
+   	<div class="tag">Example Tag 1</div>
+   	<div class="tag">Example Tag 2</div>
+   </div>
 
-	<input type="button" value="Download" />
-
-   	<h1>Related Documents</h1>
-   	<article>
-   		<h3>Frankenstein &amp; Blade Runner</h3>
-   		<p>lorem</p>
-   	</article>
-   	<article>
-   		<h3>Seamus Heaney Sucks</h3>
-   		<p>lorem ipsum</p>
-   	</article>
+	<div class="button blue"><a href="">Download</a></div>
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=280152582078774";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	<div class="fb-like" data-send="true" data-layout="box_count" data-width="450" data-show-faces="true"></div>
 
 </aside>
 

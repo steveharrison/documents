@@ -1,7 +1,8 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1340689267.383431:@expires_in0:@value{I"
-class:EFI"BundledAsset;	FI"id;	F"%777d99699b38abc9e0337f31083267d1I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
-mtime;	FI"2012-06-26T15:40:14+10:00;	FI"	body;	FI"A8/* @override 
-	http://localhost:3000/assets/scaffolds.css?body=1 */
+o: ActiveSupport::Cache::Entry	:@created_atf1341032929.8507671:@expires_in0:@value{I"
+class:EFI"BundledAsset;	FI"id;	F"%369ec7153fabe75c7b0833cb571a8426I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
+mtime;	FI"2012-06-28T12:25:25+10:00;	FI"	body;	FI"Ø8/* @override 
+	http://localhost:3000/assets/scaffolds.css?body=1
+	http://documents-app.dev/assets/scaffolds.css?body=1 */
 
 
 html {
@@ -73,10 +74,11 @@ header ul.menu.lgray.slide {
 	background-color: white !important;
 }
 
-#sidebar nav {
+#sidebar {
 	width: 170px;
-	position: fixed;
 	height: 100%;
+	top: 0;
+	position: absolute;
 	border-right: 1px solid #ccc;
 	padding: 10px;
 }
@@ -241,7 +243,7 @@ input[type=email], input[type=text], input[type=password], textarea {
 	font-size: 14px;
 	color: #8e8d8d;
 	font-family: "Droid Sans";
-	padding: 11px 15px 10px 50px;
+	padding: 11px 15px 10px 12px;
 	background-color: #fdfdfd;
 	width: 255px;
 	display: block;
@@ -251,6 +253,10 @@ input[type=email], input[type=text], input[type=password], textarea {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	box-shadow: inset 2px 2px 4px #f1f1f1;
+}
+
+input.has-icon-placeholder {
+	padding: 50px;
 }
 
 input[class=new_tag_input] {
@@ -630,4 +636,4 @@ form.new_document {
 	color:#555;
 }
 ;	FI"asset_paths;	F[I"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"dependency_paths;	F[{I"	path;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"
-mtime;	FIu:	TimeEÄ  ‡†:@_zoneI"EST;	T:offseti†åI"hexdigest;	F"%8076fe4e06cf35fe40e237d50f12afc5I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF
+mtime;	FIu:	TimeÇÄ  êe:@_zoneI"EST;	T:offseti†åI"hexdigest;	F"%5c3425fc4b7a2ea907429192bbad7a34I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF

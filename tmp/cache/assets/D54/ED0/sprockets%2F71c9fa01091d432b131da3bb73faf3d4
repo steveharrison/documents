@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1340689267.590288:@expires_in0:@value{	I"length:EFi¡:I"digest;	F"%dec4eebeed36e480393b10c28d5719faI"source;	FI"¡:/*
+o: ActiveSupport::Cache::Entry	:@created_atf1341032935.0542452:@expires_in0:@value{	I"length:EFi;I"digest;	F"%404df596b4de905c630e2814ca5216d0I"source;	FI";/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -15,7 +15,8 @@ body {
   background-color: black;
 }
 /* @override 
-	http://localhost:3000/assets/scaffolds.css?body=1 */
+	http://localhost:3000/assets/scaffolds.css?body=1
+	http://documents-app.dev/assets/scaffolds.css?body=1 */
 
 
 html {
@@ -87,10 +88,11 @@ header ul.menu.lgray.slide {
 	background-color: white !important;
 }
 
-#sidebar nav {
+#sidebar {
 	width: 170px;
-	position: fixed;
 	height: 100%;
+	top: 0;
+	position: absolute;
 	border-right: 1px solid #ccc;
 	padding: 10px;
 }
@@ -255,7 +257,7 @@ input[type=email], input[type=text], input[type=password], textarea {
 	font-size: 14px;
 	color: #8e8d8d;
 	font-family: "Droid Sans";
-	padding: 11px 15px 10px 50px;
+	padding: 11px 15px 10px 12px;
 	background-color: #fdfdfd;
 	width: 255px;
 	display: block;
@@ -265,6 +267,10 @@ input[type=email], input[type=text], input[type=password], textarea {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	box-shadow: inset 2px 2px 4px #f1f1f1;
+}
+
+input.has-icon-placeholder {
+	padding: 50px;
 }
 
 input[class=new_tag_input] {
@@ -643,4 +649,4 @@ form.new_document {
 .lgray p a:hover {
 	color:#555;
 }
-;	FI"_version;	F"%00f9f96932e66f42628bab64b2b6aacc:@compressedF
+;	FI"_version;	F"%e41271d131bc50335586825b820d9ffa:@compressedF

@@ -1,5 +1,6 @@
 /* @override 
-	http://localhost:3000/assets/scaffolds.css?body=1 */
+	http://localhost:3000/assets/scaffolds.css?body=1
+	http://documents-app.dev/assets/scaffolds.css?body=1 */
 
 html {
 	overflow: scroll;
@@ -61,8 +62,9 @@ background-image: -moz-linear-gradient(90deg, #ffcb6e 0%, #fbc36e 100%);
 header ul.menu.lgray.slide {
 	z-index: 2000000000;
 	position: fixed;
-	top: 0;
-	width: 100%;
+	top: 10px;
+	left: 10px;
+	right: 10px;
 	/* margin: 0 20px 0 20px; */
 }
 
@@ -84,8 +86,8 @@ header ul.menu.lgray.slide {
 	position: absolute;
 	top: 50px;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	left: 20px;
+	right: 20px;
 	background: white;
 }
 
@@ -239,7 +241,7 @@ input[type=email], input[type=text], input[type=password], textarea {
 	font-size: 14px;
 	color: #8e8d8d;
 	font-family: "Droid Sans";
-	padding: 11px 15px 10px 50px;
+	padding: 11px 15px 10px 12px;
 	background-color: #fdfdfd;
 	width: 255px;
 	display: block;
@@ -249,6 +251,10 @@ input[type=email], input[type=text], input[type=password], textarea {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	box-shadow: inset 2px 2px 4px #f1f1f1;
+}
+
+input.has-icon-placeholder {
+	padding: 50px;
 }
 
 input[class=new_tag_input] {

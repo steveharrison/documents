@@ -7,7 +7,8 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'mysql2'
 
 gem 'json'
 
@@ -45,3 +46,4 @@ gem 'hobo_fields', '~> 1.4.0.pre4'
 gem "omniauth-facebook"
 gem 'paperclip'
 gem 'rest-client'
+gem 'thinking-sphinx', '2.0.10'

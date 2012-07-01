@@ -1,5 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1340689267.6866329:@expires_in0:@value{	I"length:EFiA8I"digest;	F"%a50fb8ea86222524e66c06ac4ff4badcI"source;	FI"A8/* @override 
-	http://localhost:3000/assets/scaffolds.css?body=1 */
+o: ActiveSupport::Cache::Entry	:@created_atf1341152713.649062:@expires_in0:@value{	I"length:EFi¯8I"digest;	F"%3f9b62dc77d40813d21ea36a9a50b68bI"source;	FI"¯8/* @override 
+	http://localhost:3000/assets/scaffolds.css?body=1
+	http://documents-app.dev/assets/scaffolds.css?body=1 */
 
 
 html {
@@ -71,10 +72,11 @@ header ul.menu.lgray.slide {
 	background-color: white !important;
 }
 
-#sidebar nav {
+#sidebar {
 	width: 170px;
-	position: fixed;
 	height: 100%;
+	top: 0;
+	position: absolute;
 	border-right: 1px solid #ccc;
 	padding: 10px;
 }
@@ -239,7 +241,7 @@ input[type=email], input[type=text], input[type=password], textarea {
 	font-size: 14px;
 	color: #8e8d8d;
 	font-family: "Droid Sans";
-	padding: 11px 15px 10px 50px;
+	padding: 11px 15px 10px 12px;
 	background-color: #fdfdfd;
 	width: 255px;
 	display: block;
@@ -249,6 +251,10 @@ input[type=email], input[type=text], input[type=password], textarea {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	box-shadow: inset 2px 2px 4px #f1f1f1;
+}
+
+input.has-icon-placeholder {
+	padding: 50px;
 }
 
 input[class=new_tag_input] {
@@ -627,4 +633,4 @@ form.new_document {
 .lgray p a:hover {
 	color:#555;
 }
-;	FI"_version;	F"%777d99699b38abc9e0337f31083267d1:@compressedF
+;	FI"_version;	F"%369ec7153fabe75c7b0833cb571a8426:@compressedF
