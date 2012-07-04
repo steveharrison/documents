@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Documents</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
@@ -16,6 +15,7 @@
 
 <link rel="stylesheet" href="/tags.css"/>
 <script src="/tags.js"></script>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
 
 
 
@@ -36,7 +36,7 @@
     			<% end %>
     		</ul>
     	</li>
-    	<li class="floatr"><%= link_to "New", new_document_path %></li>
+    	<li class="floatr"><%= link_to "Upload", new_document_path %></li>
 	<% if user_signed_in? %>
 		<li class="floatr">
 			<%= link_to current_user.fullname, "" %>
@@ -47,7 +47,7 @@
 		
 		</li>
 		
-		<li><a>Search</a></li>
+<!--		<li><a>Search</a></li>-->
 	<% else %>
 		<li><%= link_to('Login', new_user_session_path)  %></li>
 	<% end %>

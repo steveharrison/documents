@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1341032929.8507671:@expires_in0:@value{I"
-class:EFI"BundledAsset;	FI"id;	F"%369ec7153fabe75c7b0833cb571a8426I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
-mtime;	FI"2012-06-28T12:25:25+10:00;	FI"	body;	FI"Ø8/* @override 
+o: ActiveSupport::Cache::Entry	:@created_atf1341386590.0461388:@expires_in0:@value{I"
+class:EFI"BundledAsset;	FI"id;	F"%196cc6b0cb2e8a1ff075c65f8a650323I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
+mtime;	FI"2012-07-04T17:23:04+10:00;	FI"	body;	FI"Ü:/* @override 
 	http://localhost:3000/assets/scaffolds.css?body=1
 	http://documents-app.dev/assets/scaffolds.css?body=1 */
 
@@ -65,8 +65,9 @@ background-image: -moz-linear-gradient(90deg, #ffcb6e 0%, #fbc36e 100%);
 header ul.menu.lgray.slide {
 	z-index: 2000000000;
 	position: fixed;
-	top: 0;
-	width: 100%;
+	top: 10px;
+	left: 10px;
+	right: 10px;
 	/* margin: 0 20px 0 20px; */
 }
 
@@ -86,10 +87,10 @@ header ul.menu.lgray.slide {
 /* Content */
 #content {
 	position: absolute;
-	top: 50px;
+	top: 60px;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	left: 20px;
+	right: 20px;
 	background: white;
 }
 
@@ -98,6 +99,7 @@ header ul.menu.lgray.slide {
 }
 
 #page, #document-container {
+width: 600px;
 position: absolute;
 top: 0;
 bottom: 0;
@@ -128,14 +130,20 @@ box-shadow:1px 1px 3px #999; outline:none;
 	margin-top: 0;
 }
 
-#page article {
+h1 {
+	margin-left: 20px;
+}
+
+article h2 {
+	font-size: 20px !important;
+}
+
+article {
+padding: 20px;
+border-bottom: 1px solid #ddd;
 }
 
 input[type=text], textarea {
-	color:#57595d;
-	font: 12px tahoma, arial;
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 h2 {
@@ -149,11 +157,12 @@ h2 {
 iframe {
 	width: 100%;
 	height: 80%;
-	border: 1px solid; #333;
+	border: 1px solid #333;
 	position: fixed;
 	right: 0;
 	bottom: 0;
 }
+
 
 a{ text-decoration:none;}
 p{ line-height:20px;}
@@ -239,21 +248,32 @@ input.button {
 
 /** Login Fields **/
 
-input[type=email], input[type=text], input[type=password], textarea {
-	font-size: 14px;
-	color: #8e8d8d;
-	font-family: "Droid Sans";
+input[type=email], input[type=text], input[type=password], textarea, .tag_for {
+	color: #444;
 	padding: 11px 15px 10px 12px;
-	background-color: #fdfdfd;
+	background-color: white;
 	width: 255px;
 	display: block;
-	border:1px solid #d8d8d8;
 	margin: 13px 0 -3px 0;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
-	border-radius: 3px;
+	border-radius: 5px;
 	box-shadow: inset 2px 2px 4px #f1f1f1;
+	outline: none;
+	border: 1px solid #aaa;
+	box-shadow: inset 0px 1px 2px #ccc;
+	font: 14px "Droid Sans", HelveticaNeue;
 }
+
+input[type=text]:focus {
+	box-shadow: 0 0 8px #5cc3eb, inset 0 1px 2px #add1f2;
+	-moz-box-shadow: 0 0 8px #5cc3eb, inset 0 1px 2px #add1f2;
+	-webkit-box-shadow: 0 0 8px #5cc3eb, inset 0 1px 2px #add1f2;
+	border: 1px solid #7da8cd;
+	color: #12648f;
+	text-decoration: underline;
+}
+
 
 input.has-icon-placeholder {
 	padding: 50px;
@@ -264,6 +284,12 @@ input[class=new_tag_input] {
 	padding: 0;
 	border: none;
 	box-shadow: none;
+}
+
+input[class=new_tag_input]:focus {
+	box-shadow: none;
+	border: none;
+	
 }
 
 input[type=email] {
@@ -636,4 +662,4 @@ form.new_document {
 	color:#555;
 }
 ;	FI"asset_paths;	F[I"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"dependency_paths;	F[{I"	path;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"
-mtime;	FIu:	TimeÇÄ  êe:@_zoneI"EST;	T:offseti†åI"hexdigest;	F"%5c3425fc4b7a2ea907429192bbad7a34I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF
+mtime;	FIu:	TimeáÄ  @\:@_zoneI"EST;	T:offseti†åI"hexdigest;	F"%3c091e06d95aa961f78af22698c82f02I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF
