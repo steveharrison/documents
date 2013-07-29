@@ -245,7 +245,7 @@ input.button {
 
 /** Login Fields **/
 
-input[type=email], input[type=text], input[type=password], textarea, .tag_for {
+input[type=email], input[type=text], input[type=password], textarea, .tag_form {
 	color: #444;
 	padding: 11px 15px 10px 12px;
 	background-color: white;
@@ -262,21 +262,20 @@ input[type=email], input[type=text], input[type=password], textarea, .tag_for {
 	font: 14px "Droid Sans", HelveticaNeue;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, #tag-field:focus {
 	box-shadow: 0 0 8px #5cc3eb, inset 0 1px 2px #add1f2;
 	-moz-box-shadow: 0 0 8px #5cc3eb, inset 0 1px 2px #add1f2;
 	-webkit-box-shadow: 0 0 8px #5cc3eb, inset 0 1px 2px #add1f2;
 	border: 1px solid #7da8cd;
 	color: #12648f;
-	text-decoration: underline;
 }
-
 
 input.has-icon-placeholder {
 	padding: 50px;
 }
 
 input[class=new_tag_input] {
+	display: inline-block;
 	margin: 0;
 	padding: 0;
 	border: none;
@@ -288,6 +287,11 @@ input[class=new_tag_input]:focus {
 	border: none;
 	
 }
+
+#new_document input[type=submit] {
+	margin-top: 20px;
+}
+
 
 input[type=email] {
 	background-image: url(/user-field.png) !important;

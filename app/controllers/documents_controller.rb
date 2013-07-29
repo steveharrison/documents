@@ -77,7 +77,7 @@ include Crocodoc
   	taglist = JSON.parse(params[:tags])
   	logger.debug "Taglist: #{taglist}"
   	taglist.each do |tagname|
-  		tag = Tag.where(:name => tagname) || Tag.new(:name => tagname)
+  		tag = (Tag.where(:name => tagname).exists?) ? Tag.where(:name => tagname) : Tag.new(:name => tagname)
   		@document.tags << tag
   		logger.debug "Assigning tag '#{tagname}' to document (#{@document.id})"
   	end

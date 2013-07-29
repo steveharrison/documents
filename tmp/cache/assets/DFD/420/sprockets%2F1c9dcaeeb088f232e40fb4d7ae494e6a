@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@created_atf1341386590.0461388:@expires_in0:@value{I"
-class:EFI"BundledAsset;	FI"id;	F"%196cc6b0cb2e8a1ff075c65f8a650323I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
-mtime;	FI"2012-07-04T17:23:04+10:00;	FI"	body;	FI"†:/* @override 
+o: ActiveSupport::Cache::Entry	:@created_atf1341398733.608035:@expires_in0:@value{I"
+class:EFI"BundledAsset;	FI"id;	F"%895c3f92641e512765dbf5d0147c75f8I"logical_path;	FI"scaffolds.css;	FI"pathname;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"content_type;	FI"text/css;	FI"
+mtime;	FI"2012-07-04T20:44:33+10:00;	FI"	body;	FI"Í:/* @override 
 	http://localhost:3000/assets/scaffolds.css?body=1
 	http://documents-app.dev/assets/scaffolds.css?body=1 */
 
@@ -248,7 +248,7 @@ input.button {
 
 /** Login Fields **/
 
-input[type=email], input[type=text], input[type=password], textarea, .tag_for {
+input[type=email], input[type=text], input[type=password], textarea, .tag_form {
 	color: #444;
 	padding: 11px 15px 10px 12px;
 	background-color: white;
@@ -265,21 +265,20 @@ input[type=email], input[type=text], input[type=password], textarea, .tag_for {
 	font: 14px "Droid Sans", HelveticaNeue;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, #tag-field:focus {
 	box-shadow: 0 0 8px #5cc3eb, inset 0 1px 2px #add1f2;
 	-moz-box-shadow: 0 0 8px #5cc3eb, inset 0 1px 2px #add1f2;
 	-webkit-box-shadow: 0 0 8px #5cc3eb, inset 0 1px 2px #add1f2;
 	border: 1px solid #7da8cd;
 	color: #12648f;
-	text-decoration: underline;
 }
-
 
 input.has-icon-placeholder {
 	padding: 50px;
 }
 
 input[class=new_tag_input] {
+	display: inline-block;
 	margin: 0;
 	padding: 0;
 	border: none;
@@ -291,6 +290,11 @@ input[class=new_tag_input]:focus {
 	border: none;
 	
 }
+
+#new_document input[type=submit] {
+	margin-top: 20px;
+}
+
 
 input[type=email] {
 	background-image: url(/user-field.png) !important;
@@ -662,4 +666,4 @@ form.new_document {
 	color:#555;
 }
 ;	FI"asset_paths;	F[I"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"dependency_paths;	F[{I"	path;	FI"3$root/app/assets/stylesheets/scaffolds.css.erb;	FI"
-mtime;	FIu:	Time‡€  @\:@_zoneI"EST;	T:offseti ŒI"hexdigest;	F"%3c091e06d95aa961f78af22698c82f02I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF
+mtime;	FIu:	TimeŠ€  ²:@_zoneI"EST;	T:offseti ŒI"hexdigest;	F"%f0b3fe6a702f9e57b66fa13a2fffc676I"_version;	F"%0868aba5d4b750d3a9421721ea3d9b9c:@compressedF
